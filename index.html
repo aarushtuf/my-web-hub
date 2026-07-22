@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Link Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="themeToggle" type="button">Dark mode</button>
+    <main class="container">
+      <img
+        class="profile-img"
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+        alt="Aarush"
+        loading="lazy"
+      />
+      <h1>Aarush</h1>
+      <p>Funny, energetic, and always ready for a laugh. I love gaming, school, and making every day a little more fun.</p>
+      <div class="links">
+        <a class="link-btn" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+          <span class="label"><span class="emoji">🎨</span><span>Portfolio</span></span>
+          <span class="link-handler">—</span>
+        </a>
+        <a class="link-btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <span class="label"><span class="emoji">▶️</span><span>YouTube</span></span>
+          <span class="link-handler">Krush</span>
+        </a>
+        <a class="link-btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <span class="label"><span class="emoji">🐙</span><span>GitHub</span></span>
+          <span class="link-handler">AarushTuf</span>
+        </a>
+        <a class="link-btn" href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" target="_blank" rel="noopener noreferrer">
+          <span class="label"><span class="emoji">🎧</span><span>Spotify Playlist</span></span>
+          <span class="link-handler">ADuck175</span>
+        </a>
+      </div>
+    </main>
+
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        const isDark = document.body.classList.contains("dark-theme");
+        themeToggle.textContent = isDark ? "Light mode" : "Dark mode";
+      });
+    </script>
+  </body>
+</html>
